@@ -1,4 +1,127 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:id="@+id/map" tools:context=".MapsActivity"
-    android:name="com.google.android.gms.maps.SupportMapFragment" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fragment
+        android:name="com.gabbyberas.foodmapapp.HeaderFragment"
+        android:id="@+id/header_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_weight="0.05"/>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.95">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/map" tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+        <LinearLayout
+            android:id="@+id/searchForm"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"/>
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:onClick="onSearch"/>
+
+            <Button
+                android:id="@+id/map_type_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:onClick="onMapType"/>
+
+
+        </LinearLayout>
+
+
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/zoon_in_Ibtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zoom_in_icon"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp"
+                    android:onClick="onZoom"/>
+
+                <ImageButton
+                    android:id="@+id/zoon_out_Ibtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/zoom_out_icon"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:layout_centerInParent="true"
+                    android:padding="8dp"
+                    android:onClick="onZoom"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="40dp">
+
+                <ImageButton
+                    android:id="@+id/directBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/chi_duong_icon"/>
+
+                <ImageButton
+                    android:id="@+id/call_res_Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerInside"
+                    android:layout_centerInParent="true"
+                    android:layout_weight="1"
+                    android:src="@drawable/goi_dien_icon"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

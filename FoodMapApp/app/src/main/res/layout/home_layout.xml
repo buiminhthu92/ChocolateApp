@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <fragment
+        android:name="com.gabbyberas.foodmapapp.HeaderFragment"
+        android:id="@+id/header_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"/>
+
+    <TextView
+        android:id="@+id/myText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:text="hehe"/>
+
+</LinearLayout>
