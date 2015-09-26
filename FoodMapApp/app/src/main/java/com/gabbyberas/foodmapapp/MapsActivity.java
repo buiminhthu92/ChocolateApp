@@ -101,7 +101,7 @@ public class MapsActivity extends FragmentActivity {
         String location = location_tf.getText().toString();
         List<Address> addressList = null;
 
-        if(location != null || !location.equals("")) {
+        if(location != null || !location.equals(" ")) {
             Geocoder geocoder = new Geocoder(this);
             try {
                addressList = geocoder.getFromLocationName(location, 1);
