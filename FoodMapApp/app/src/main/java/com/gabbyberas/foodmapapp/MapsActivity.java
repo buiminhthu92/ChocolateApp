@@ -88,7 +88,6 @@ public class MapsActivity extends FragmentActivity {
 //        searchForm.setEnabled(false);
 //    }
 
-
     @Override
     protected void onResume() {
         super.onResume();
@@ -109,7 +108,9 @@ public class MapsActivity extends FragmentActivity {
                 e.printStackTrace();
             }
 
+            //Set try catch o day
             Address address = addressList.get(0);
+
             LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
             mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
             mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));

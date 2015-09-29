@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tag_name">
+        <item>Sang Trọng</item>
+        <item>Văn Phòng</item>
+        <item>Bình Dân</item>
+        <item>Cafe</item>
+        <item>Quán Nhậu</item>
+        <item>Đồ Ăn Nhanh</item>
+        <item>Quán Vỉa Hè</item>
+    </string-array>
+    
+    <array name="tag_icon">
+        <item>@drawable/sang_trong_icon</item>
+        <item>@drawable/van_phong_icon</item>
+        <item>@drawable/binh_dan_icon</item>
+        <item>@drawable/cafe_icon</item>
+        <item>@drawable/quan_nhau_icon</item>
+        <item>@drawable/do_an_nhanh_icon</item>
+        <item>@drawable/duong_pho_icon</item>
+    </array>
+</resources>
