@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 /**
  * Created by Android on 9/25/2015.
  */
-public class HeaderFragment extends Fragment {
+public class HeaderFragment extends Fragment implements View.OnClickListener{
 
     Button homeBtn, searchBtn, saerchTagBtn, addLocationBtn, noticeBtn, loginFbBtn;
 
@@ -24,8 +24,15 @@ public class HeaderFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstance) {
-        return inflater.inflate(R.layout.header_fragment_layout, container, false);
+        View view = inflater.inflate(R.layout.header_new, container, false);
 
-        
+        //ImageView imageView = (ImageView) view.findViewById(R.id.my_image);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

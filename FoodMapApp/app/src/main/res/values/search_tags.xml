@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="tag_name">
+        <item>Tất Cả</item>
         <item>Sang Trọng</item>
         <item>Văn Phòng</item>
         <item>Bình Dân</item>
@@ -11,6 +12,7 @@
     </string-array>
     
     <array name="tag_icon">
+        <item>@drawable/app_icon2</item>
         <item>@drawable/sang_trong_icon</item>
         <item>@drawable/van_phong_icon</item>
         <item>@drawable/binh_dan_icon</item>
@@ -19,4 +21,6 @@
         <item>@drawable/do_an_nhanh_icon</item>
         <item>@drawable/duong_pho_icon</item>
     </array>
+
+
 </resources>

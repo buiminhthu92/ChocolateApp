@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp">
 
         <ImageView
+            android:id="@+id/userImg"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:scaleType="fitEnd"
@@ -19,6 +21,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
             android:orientation="vertical">
 
             <TextView
@@ -49,26 +52,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="115dp"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
             android:src="@drawable/food_image1"/>
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
-            android:src="@drawable/food_image1"/>
+            android:src="@drawable/food_image2"/>
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
             android:layout_weight="1"
-            android:src="@drawable/food_image1"/>
+            android:src="@drawable/food_image3"/>
 
     </LinearLayout>
 
