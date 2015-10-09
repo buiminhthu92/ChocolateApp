@@ -1,140 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <ScrollView
+    <fragment
+        android:name="com.gabbyberas.foodmapapp.HeaderFragment"
+        android:id="@+id/header_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/food_cover"/>
-
-            <TextView
-                android:id="@+id/tenNhaHangTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:paddingLeft="6dp"
-                android:text="Nhà Hàng Mexico"/>
-
-            <TextView
-                android:id="@+id/diaChiNhaHangTv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:paddingLeft="6dp"
-                android:paddingBottom="6dp"
-                android:text="86-Khương Trung-Thanh Xuân-HN"/>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/red"/>
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp">
-
-                <TableRow
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Comment"
-                        android:textSize="16sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Ảnh"
-                        android:textSize="16sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Like"
-                        android:textSize="16sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/comPageTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="4"
-                        android:textSize="20sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/anhPageTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="12"
-                        android:textSize="20sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                    <TextView
-                        android:id="@+id/likePageTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="8"
-                        android:textSize="20sp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textStyle="bold"/>
-
-                </TableRow>
-
-
-            </TableLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/red"/>
-
-        </LinearLayout>
-
-    </ScrollView>
+        android:layout_height="44dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--Phan hien thi anh bia va cac icon binh luan, anh, like-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/food_cover"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="7dp"
+                        android:paddingRight="7dp"
+                        android:orientation="horizontal">
+
+                        <!--So luong comment cua trang-->
+                        <LinearLayout
+                            android:layout_width="55dp"
+                            android:layout_height="59dp"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:scaleType="fitCenter"
+                                android:background="@null"
+                                android:layout_gravity="center"
+                                android:src="@drawable/comment_icon"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:text="23"/>
+
+                        </LinearLayout>
+                        <!--So luong anh cua trang-->
+                        <LinearLayout
+                            android:layout_width="55dp"
+                            android:layout_height="59dp"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:scaleType="fitCenter"
+                                android:background="@null"
+                                android:layout_gravity="center"
+                                android:src="@drawable/image_icon"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:text="23"/>
+
+                        </LinearLayout>
+                        <!--So luong like cua trang-->
+                        <LinearLayout
+                            android:layout_width="55dp"
+                            android:layout_height="59dp"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:scaleType="fitCenter"
+                                android:background="@null"
+                                android:layout_gravity="center"
+                                android:src="@drawable/like_icon"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:textSize="18sp"
+                                android:gravity="center"
+                                android:textColor="@color/white_color"
+                                android:textStyle="bold"
+                                android:text="23"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <!--Ten nha hang-->
+                <TextView
+                    android:id="@+id/tenNhaHangTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="6dp"
+                    android:text="Nhà Hàng Mexico"/>
+                <!--Dia chi theo dang chu-->
+                <TextView
+                    android:id="@+id/diaChiNhaHangTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="6dp"
+                    android:paddingBottom="6dp"
+                    android:text="86-Khương Trung-Thanh Xuân-HN"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/red"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:textColor="@color/gray_color"
+                        android:paddingLeft="7dp"
+                        android:paddingTop="6dp"
+                        android:gravity="center_horizontal|left"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic"
+                        android:text="Các Bình Luận"
+                        android:background="@color/gray_blue_color"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <fragment
+                            android:name="com.gabbyberas.foodmapapp.CommentFragment"
+                            android:id="@+id/comment1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <fragment
+                            android:name="com.gabbyberas.foodmapapp.CommentFragment"
+                            android:id="@+id/comment2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <fragment
+                            android:name="com.gabbyberas.foodmapapp.CommentFragment"
+                            android:id="@+id/comment3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <fragment
+                            android:name="com.gabbyberas.foodmapapp.CommentFragment"
+                            android:id="@+id/comment4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                        <fragment
+                            android:name="com.gabbyberas.foodmapapp.CommentFragment"
+                            android:id="@+id/comment5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:background="@color/blue_fresh"
+            android:src="@drawable/upload_comment_icon"/>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:background="@color/blue_fresh"
+            android:src="@drawable/upload_img_icon"/>
 
     </LinearLayout>
 
