@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/icon_tag_Img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="6dp"
+        android:layout_marginRight="7dp"
+        android:src="@drawable/binh_dan_icon"/>
+
+    <TextView
+        android:id="@+id/text_tag_Tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="16dp"
+        android:gravity="center_vertical"
+        android:text="Bình dân" />
+
+</LinearLayout>

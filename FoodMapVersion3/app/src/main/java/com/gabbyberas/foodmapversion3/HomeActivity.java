@@ -30,7 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
 
-        ivanzeige = (ImageView) findViewById(R.id.ivAnzeige);
+       // ivanzeige = (ImageView) findViewById(R.id.ivAnzeige);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
@@ -47,17 +47,17 @@ public class HomeActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
 
                     case R.id.drawerViewItem1:{
-                        ivanzeige.setImageResource(R.drawable.ic_mood_grey600_18dp);
+                       // ivanzeige.setImageResource(R.drawable.ic_mood_grey600_18dp);
                         break;
                     }
 
                     case R.id.drawerViewItem2:{
-                        ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
+                        //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
                         break;
                     }
 
                     case R.id.drawerViewItem3:{
-                        ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+                       // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
                         break;
                     }
                 }
