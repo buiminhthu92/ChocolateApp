@@ -4,13 +4,9 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
-    repositories {
-        mavenCentral()
-    }
-
     defaultConfig {
-        applicationId "com.gabbyberas.foodmapversion3"
-        minSdkVersion 15
+        applicationId "com.gabbybears.showimage"
+        minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -26,9 +22,4 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.0.1'
-    compile 'com.android.support:design:22.2.0'
-
-    compile 'com.google.android.gms:play-services:7.5.0'
-    compile 'com.facebook.android:facebook-android-sdk:4.7.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
 }

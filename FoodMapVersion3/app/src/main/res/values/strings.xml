@@ -4,6 +4,7 @@
     <string name="action_settings">Settings</string>
     <string name="auf">open</string>
     <string name="zu">closed</string>
+    <string name="app_id">791403804318833</string>
 
     <string-array name="name_of_tag">
         <item>Tất Cả</item>
