@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- Buoc 1: thiet ke giao dien cua man hinh chua listview-->
+
+    <GridView
+        android:id="@+id/lvStudent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:horizontalSpacing="3dp"
+        android:verticalSpacing="3dp"
+        android:stretchMode="columnWidth"
+        android:numColumns="auto_fit">
+
+    </GridView>
+
+</LinearLayout>

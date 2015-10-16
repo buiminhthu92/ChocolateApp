@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/an_chay"/>
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/an_ngon"/>
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/calo_thuc_pham"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/family"/>
+
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/hoa_qua"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="125dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/an_kem_hoa_qua"/>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="165dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/an_uong_thu_gian"/>
+
+    </LinearLayout>
+
+</LinearLayout>

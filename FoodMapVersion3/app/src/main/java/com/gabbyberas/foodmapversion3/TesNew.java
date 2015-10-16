@@ -11,6 +11,6 @@ public class TesNew extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.list_comment_fragment_layout);
+        setContentView(R.layout.test_layout);
     }
 }

@@ -101,8 +101,8 @@ public class FBLoginBtnFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        mTextDetails = (TextView) view.findViewById(R.id.textDetail);
-//        mAvarUser = (ImageView) view.findViewById(R.id.vavarUser);
+        mTextDetails = (TextView) view.findViewById(R.id.textDetail);
+        mAvarUser = (ImageView) view.findViewById(R.id.vavarUser);
         LoginButton loginButton = (LoginButton)view.findViewById(R.id.login_button);
         loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);
@@ -111,10 +111,10 @@ public class FBLoginBtnFragment extends Fragment {
 
     public void displayWellcomeMessage(Profile profile) {
         if (profile != null) {
-           /* mTextDetails.setText("Wellcome: " + profile.getName());
+            mTextDetails.setText("Wellcome: " + profile.getName());
             Picasso.with(getActivity()).load(profile.getProfilePictureUri(70, 70))
-                    .placeholder(R.drawable.avatar_login)
-                    .into(mAvarUser);*/
+                    .placeholder(R.drawable.default_img_user)
+                    .into(mAvarUser);
 
 
         }
