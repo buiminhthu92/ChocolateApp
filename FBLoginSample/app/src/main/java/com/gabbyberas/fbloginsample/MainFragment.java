@@ -29,6 +29,9 @@ import com.squareup.picasso.Picasso;
  */
 public class MainFragment extends Fragment {
 
+    public static String nameOfUserFB = "";
+    public static String imgOfUserFB = "";
+
     private TextView mTextDetails;
     private ImageView mAvarUser;
 
@@ -116,7 +119,12 @@ public class MainFragment extends Fragment {
                     .placeholder(R.drawable.avatar_login)
                     .into(mAvarUser);
 
-
+            nameOfUserFB = profile.getFirstName() + " " + profile.getLastName();
+            imgOfUserFB = profile.getProfilePictureUri(80, 80).toString();
+        }
+        else {
+            nameOfUserFB = "";
+            imgOfUserFB = "";
         }
     }
 

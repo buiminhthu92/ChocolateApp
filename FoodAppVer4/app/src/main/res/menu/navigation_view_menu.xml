@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:checkableBehavior="single"
-        >
+    <group android:checkableBehavior="single">
 
         <!-- //////////////// ERGÄNZUNG: ////////////////
         Damit das 1. Item gleich beim App-Start markiert ist, müsst ihr beim ersten Item noch diese Zeile einfügen:
@@ -11,29 +9,51 @@
         -->
         <item
             android:id="@+id/drawerViewItem1"
-            android:title="1. Item"
-            android:icon="@drawable/ic_mood_grey600_18dp"
-
             android:checked="true"
-
+            android:icon="@drawable/find_by_tag_icon"
+            android:title="Find by Tags"
             />
 
         <item
             android:id="@+id/drawerViewItem2"
-            android:title="2. Item"
-            android:icon="@drawable/ic_notifications_grey600_18dp"
+            android:icon="@drawable/find_by_distance_icon"
+            android:title="Find by Distance"
 
             />
         <item
             android:id="@+id/drawerViewItem3"
-            android:title="3. Item"
-            android:icon="@drawable/ic_poll_grey600_18dp"
+            android:icon="@drawable/suggest_res_icon"
+            android:title="Suggest Restaurant"
 
             />
         <item
             android:id="@+id/drawerViewItem4"
-                android:title="4. Image"
-            android:icon="@drawable/upload_img_icon"
+            android:icon="@drawable/profile_icon"
+            android:title="Profile"
+
+            />
+        <item
+            android:id="@+id/drawerViewItem5"
+            android:icon="@drawable/friends_icon"
+            android:title="Friens"
+
+            />
+        <item
+            android:id="@+id/drawerViewItem6"
+            android:icon="@drawable/setting_icon"
+            android:title="Setting"
+
+            />
+        <item
+            android:id="@+id/drawerViewItem7"
+            android:icon="@drawable/email_feedback_icon"
+            android:title="Email feedback"
+
+            />
+        <item
+            android:id="@+id/drawerViewItem8"
+            android:icon="@drawable/logout_icon"
+            android:title="Logout"
 
             />
 
