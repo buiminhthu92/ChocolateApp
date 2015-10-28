@@ -10,14 +10,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.find_by_distance_screen.Find_By_Distance_Fragment;
 import com.gabbybears.foodappver4.fragments_screen.List_Page_Fragment;
 import com.gabbybears.foodappver4.fragments_screen.Map_With_Tag_Fragment;
 import com.gabbybears.foodappver4.fragments_screen.Request_Res_Fragment;
+import com.gabbybears.foodappver4.friends_screen.Friends_Fragment_Adapter;
+import com.gabbybears.foodappver4.profile_screen.Profile_Fragment_Adapter;
 
 /**
  * Created by Android on 10/8/2015.
@@ -40,6 +44,11 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.home_layout);
 
         // ivanzeige = (ImageView) findViewById(R.id.ivAnzeige);
+        fragmentManager = getSupportFragmentManager();
+        fragment = new Map_With_Tag_Fragment();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.add(R.id.group, fragment);
+        transaction.commit();
 
         toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
@@ -52,7 +61,6 @@ public class HomeActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Fragment newFragment;
 
                 switch (menuItem.getItemId()){
 
@@ -65,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     case R.id.drawerViewItem2:{
                         //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
-                        fragment = new List_Page_Fragment();
+                        fragment = new Find_By_Distance_Fragment();
 
 
                         break;
@@ -77,17 +85,34 @@ public class HomeActivity extends AppCompatActivity {
 
                         break;
                     }
+
+                    case R.id.drawerViewItem4:{
+                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+                        fragment = new Profile_Fragment_Adapter();
+
+                        break;
+                    }
+
+                    case R.id.drawerViewItem5:{
+                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+                        fragment = new Friends_Fragment_Adapter();
+
+                        break;
+                    }
                 }
 
-                if (fragment != null) {
-                    fragmentManager = getSupportFragmentManager();
+
+                /*if (fragment != null) {
+                    //fragmentManager = getSupportFragmentManager();
                     FragmentTransaction transaction = fragmentManager.beginTransaction();
                     transaction.replace(R.id.group, fragment);
                     transaction.commit();
-                }
+                }*/
 
                 drawerLayoutgesamt.closeDrawers();
                 menuItem.setChecked(true);
+
+                replaceFragment(fragment);
 
                 return false;
             }
@@ -115,9 +140,9 @@ public class HomeActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        /*if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
@@ -137,5 +162,24 @@ public class HomeActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         drawerToggle.onConfigurationChanged(new Configuration());
+    }
+
+    //Replace fragment method
+    private void replaceFragment(Fragment fragment) {
+        String backStateName = fragment.getClass().getName();
+        String fragmentTag = backStateName;
+
+        Log.d("NameFragment", fragmentTag);
+
+        FragmentManager manager = getSupportFragmentManager();
+        boolean fragmentPopped = manager.popBackStackImmediate(backStateName, 0);
+
+        if (!fragmentPopped && manager.findFragmentByTag(fragmentTag) == null){ //fragment not in back stack, create it.
+            FragmentTransaction ft = manager.beginTransaction();
+            ft.replace(R.id.group, fragment, fragmentTag);
+            //ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            ft.addToBackStack(backStateName);
+            ft.commit();
+        }
     }
 }

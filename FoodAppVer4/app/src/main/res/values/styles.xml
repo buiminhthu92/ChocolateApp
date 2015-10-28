@@ -4,14 +4,19 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
 
         <item name="drawerArrowStyle">@style/drawerarrowstyle1</item>
+        <item name="colorPrimary">#ff3991ff</item>
 
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="MyActionBar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">#ff3991ff</item>
+        <item name="colorPrimary">#ff3991ff</item>
     </style>
 
     <style name="drawerarrowstyle1" parent="Widget.AppCompat.DrawerArrowToggle">
 
         <item name="spinBars">true</item>
-
 
     </style>
 

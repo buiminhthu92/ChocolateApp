@@ -4,83 +4,31 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/blue_fresh">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:background="@color/gray_color_2"
         android:layout_weight="0.3"
         android:orientation="vertical">
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.3"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="right|center_vertical"
-                android:paddingRight="7dp"
-                android:layout_weight="0.3">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/send_email_icon"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="7dp"
-                android:layout_weight="0.25">
-
-                <ImageView
-                    android:layout_width="110dp"
-                    android:layout_height="110dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/selfies_girl_1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="left|center_vertical"
-                android:paddingLeft="7dp"
-                android:layout_weight="0.3">
-
-                <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="40dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/add_friend_icon"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
+            android:layout_height="170dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cover_page_user"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0.05"
+            android:layout_gravity="bottom|left"
             android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
             android:gravity="center"
             android:textSize="26dp"
+            android:textColor="@color/white_color"
             android:text="Theodora Kalash"/>
 
-    </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

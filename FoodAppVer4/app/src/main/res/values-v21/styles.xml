@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="drawerarrowstyle1" parent="Widget.AppCompat.DrawerArrowToggle">
+
+        <item name="spinBars">true</item>
+
+    </style>
+</resources>

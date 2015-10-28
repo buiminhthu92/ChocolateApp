@@ -11,6 +11,6 @@ public class TestActtivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.feed_element_layout);
+        setContentView(R.layout.test_activity_layout);
     }
 }

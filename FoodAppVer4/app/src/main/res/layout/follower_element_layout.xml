@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="117dp"
+    android:layout_height="117dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/avar_Friends"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center"
+        android:layout_marginBottom="7dp"
+        android:src="@drawable/selfies_girl_3"/>
+
+    <TextView
+        android:id="@+id/name_Friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_marginBottom="3dp"
+        android:text="Armada Bady"/>
+
+    <TextView
+        android:id="@+id/numfl_Friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:textColor="@color/gray_color"
+        android:text="123 followers"/>
+
+</LinearLayout>

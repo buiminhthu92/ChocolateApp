@@ -12,7 +12,7 @@
         android:padding="6dp"
         android:layout_marginLeft="9dp"
         android:layout_marginRight="7dp"
-        android:src="@drawable/binh_dan_icon"/>
+        android:src="@drawable/tag_binhdan"/>
 
     <TextView
         android:id="@+id/text_tag_Tv"

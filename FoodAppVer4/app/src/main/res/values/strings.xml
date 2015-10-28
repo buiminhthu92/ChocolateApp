@@ -18,16 +18,240 @@
     </string-array>
 
     <integer-array name="img_of_tag">
-        <item>@drawable/app_icon</item>
-        <item>@drawable/sang_trong_icon</item>
-        <item>@drawable/van_phong_icon</item>
-        <item>@drawable/binh_dan_icon</item>
-        <item>@drawable/cafe_icon</item>
-        <item>@drawable/quan_nhau_icon</item>
-        <item>@drawable/do_an_nhanh_icon</item>
-        <item>@drawable/duong_pho_icon</item>
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_sangtrong</item>
+        <item>@drawable/tag_vanphong</item>
+        <item>@drawable/tag_binhdan</item>
+        <item>@drawable/tag_cafe</item>
+        <item>@drawable/tag_quannhau</item>
+        <item>@drawable/tag_annhanh</item>
+        <item>@drawable/tag_duongpho</item>
     </integer-array>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--BEGIN FEED USER TABLE-->
+
+    <!--Avar user-->
+    <array name="avar_feed_user">
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+        <item>@drawable/selfies_girl_3</item>
+    </array>
+
+    <!--Avar user-->
+    <string-array name="name_feed_user">
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+        <item>Theodora Kallas</item>
+    </string-array>
+
+    <!--Feed Image post user-->
+    <array name="img_post_feed_user">
+        <item>@drawable/an_chay</item>
+        <item>@drawable/an_kem_hoa_qua</item>
+        <item>@drawable/an_ngon</item>
+        <item>@drawable/an_uong_thu_gian</item>
+        <item>@drawable/calo_thuc_pham</item>
+        <item>@drawable/meo_khi_an_uong</item>
+        <item>@drawable/family</item>
+    </array>
+
+    <!--time post user-->
+    <string-array name="time_post_feed_user">
+        <item>5 mins</item>
+        <item>20 mins</item>
+        <item>3 hours</item>
+        <item>12 hours</item>
+        <item>2 days</item>
+        <item>6 days</item>
+        <item>1 month</item>
+    </string-array>
+
+    <!--comment post user-->
+    <string-array name="comment_post_feed_user">
+        <item>#Begin a new day with diet food #Have a nice day everyone</item>
+        <item>#Sweeties Cupcake #Creampie, Lovely</item>
+        <item>#Vegestable and fruit #Good for your skin #Healthy</item>
+        <item>#Food and my friends</item>
+        <item>#Shopping and go to the market #Many food</item>
+        <item>#Family</item>
+        <item>#Dinner #G9 everyone</item>
+    </string-array>
+
+    <!--like num user-->
+    <string-array name="like_num_feed_user">
+        <item>7</item>
+        <item>23</item>
+        <item>11</item>
+        <item>46</item>
+        <item>1</item>
+        <item>123</item>
+        <item>4</item>
+    </string-array>
+
+    <!--like num user-->
+    <string-array name="comment_num_feed_user">
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>26</item>
+        <item>1</item>
+        <item>34</item>
+        <item>2</item>
+    </string-array>
+
+    <!--like num user-->
+    <string-array name="share_num_feed_user">
+        <item>4</item>
+        <item>3</item>
+        <item>1</item>
+        <item>4</item>
+        <item>12</item>
+        <item>18</item>
+        <item>0</item>
+    </string-array>
+
+    <!--END FEED USER TABLE-->
+
+    <string name="imgdesc">imgdesc</string>
+
+    <string-array name="titles">
+        <item>Home</item>
+        <item>Tutorials</item>
+        <item>My Apps</item>
+        <item>OS Versions</item>
+        <item>Tools</item>
+        <item>About Us</item>
+    </string-array>
+
+    <array name="icons">
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_tatca</item>
+        <item>@drawable/tag_tatca</item>
+    </array>
+
+    <!--AVAR FRIENDS-->
+    <array name="friend_avar">
+        <item>@drawable/user_avar1</item>
+        <item>@drawable/user_avar2</item>
+        <item>@drawable/user_avar3</item>
+        <item>@drawable/user_avar4</item>
+        <item>@drawable/user_avar5</item>
+        <item>@drawable/user_avar6</item>
+        <item>@drawable/user_avar7</item>
+        <item>@drawable/user_avar8</item>
+        <item>@drawable/user_avar9</item>
+        <item>@drawable/user_avar10</item>
+        <item>@drawable/user_avar11</item>
+        <item>@drawable/user_avar12</item>
+    </array>
+    <!--NAME FRIENDS-->
+    <string-array name="name_friend">
+        <item>James McDea</item>
+        <item>Maurin Drake</item>
+        <item>Deilen Ramsey</item>
+        <item>Sawer Reiley</item>
+        <item>Kim Huyna</item>
+        <item>David Thomas</item>
+        <item>Indi Ramus</item>
+        <item>Mary Ithonas</item>
+        <item>Le Trang</item>
+        <item>Tom Hands</item>
+        <item>Jenifer Madas</item>
+        <item>Jonh Dewer</item>
+    </string-array>
+    <!--NAME FRIENDS-->
+    <string-array name="num_Follow_Friend">
+        <item>12</item>
+        <item>66</item>
+        <item>100</item>
+        <item>1200</item>
+        <item>34</item>
+        <item>60</item>
+        <item>33</item>
+        <item>7</item>
+        <item>300</item>
+        <item>79</item>
+        <item>21</item>
+        <item>500</item>
+    </string-array>
+
+    <!--COVER RESTAURANT-->
+    <array name="cover_rest">
+        <item>@drawable/cover_rest_1</item>
+        <item>@drawable/cover_rest_2</item>
+        <item>@drawable/cover_rest_3</item>
+        <item>@drawable/cover_rest_4</item>
+        <item>@drawable/cover_rest_5</item>
+    </array>
+    <!--NAME RESTAURANT-->
+    <string-array name="name_rest">
+        <item>Restaurant Cacarola</item>
+        <item>Luciana Pastries</item>
+        <item>Super India Restaurant</item>
+        <item>PIZZALUXE London</item>
+        <item>Best Recipes</item>
+    </string-array>
+    <!--ADDRESS RESTAURANT-->
+    <string-array name="address_rest">
+        <item>145-Trần Hưng Đạo-Thanh Xuân</item>
+        <item>24-Vạn Phúc-Thanh Xuân</item>
+        <item>56-Nguyen Trai-Thanh Xuân</item>
+        <item>44-Hà Đông-Thanh Xuân</item>
+        <item>77-Hoàng Văn Thái-Thanh Xuân</item>
+    </string-array>
+    <!--DISTANCE RESTAURANT-->
+    <string-array name="distance_rest">
+        <item>500 m</item>
+        <item>800 m</item>
+        <item>1 Km</item>
+        <item>1.3 Km</item>
+        <item>1.5 Km</item>
+    </string-array>
+    <!--NAME TAG RESTAURANT-->
+    <string-array name="name_tag_rest">
+        <item>sang trong</item>
+        <item>binh dan</item>
+        <item>quan nhau</item>
+        <item>duong pho</item>
+        <item>binh dan</item>
+    </string-array>
+    <!--NUM COMMENT RESTAURANT-->
+    <string-array name="num_comment_rest">
+        <item>4</item>
+        <item>3</item>
+        <item>11</item>
+        <item>24</item>
+        <item>8</item>
+    </string-array>
+    <!--NUM IMAGE RESTAURANT-->
+    <string-array name="num_img_rest">
+        <item>7</item>
+        <item>11</item>
+        <item>18</item>
+        <item>37</item>
+        <item>24</item>
+    </string-array>
+    <!--NUM LIKE RESTAURANT-->
+    <string-array name="num_like_rest">
+        <item>66</item>
+        <item>37</item>
+        <item>89</item>
+        <item>33</item>
+        <item>124</item>
+    </string-array>
+
 </resources>

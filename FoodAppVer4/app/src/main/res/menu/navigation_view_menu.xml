@@ -7,56 +7,54 @@
         Damit das 1. Item gleich beim App-Start markiert ist, müsst ihr beim ersten Item noch diese Zeile einfügen:
         android:checked="true"
         -->
-        <item
-            android:id="@+id/drawerViewItem1"
-            android:checked="true"
-            android:icon="@drawable/find_by_tag_icon"
-            android:title="Find by Tags"
-            />
+        <item android:title="Restaurant place">
+            <menu>
+                <item
+                    android:id="@+id/drawerViewItem1"
+                    android:checked="true"
+                    android:icon="@drawable/nav_find_by_tag_icon"
+                    android:title="Find by Tags" />
 
-        <item
-            android:id="@+id/drawerViewItem2"
-            android:icon="@drawable/find_by_distance_icon"
-            android:title="Find by Distance"
+                <item
+                    android:id="@+id/drawerViewItem2"
+                    android:icon="@drawable/nav_find_by_distance_icon"
+                    android:title="Find by Distance" />
+                <item
+                    android:id="@+id/drawerViewItem3"
+                    android:icon="@drawable/nav_suggest_res_icon"
+                    android:title="Suggest Restaurant" />
+            </menu>
+        </item>
 
-            />
-        <item
-            android:id="@+id/drawerViewItem3"
-            android:icon="@drawable/suggest_res_icon"
-            android:title="Suggest Restaurant"
+        <item android:title="Social">
+            <menu>
+                <item
+                    android:id="@+id/drawerViewItem4"
+                    android:icon="@drawable/nav_profile_icon"
+                    android:title="Profile" />
+                <item
+                    android:id="@+id/drawerViewItem5"
+                    android:icon="@drawable/nav_friends_icon"
+                    android:title="Friens" />
+            </menu>
+        </item>
 
-            />
-        <item
-            android:id="@+id/drawerViewItem4"
-            android:icon="@drawable/profile_icon"
-            android:title="Profile"
-
-            />
-        <item
-            android:id="@+id/drawerViewItem5"
-            android:icon="@drawable/friends_icon"
-            android:title="Friens"
-
-            />
-        <item
-            android:id="@+id/drawerViewItem6"
-            android:icon="@drawable/setting_icon"
-            android:title="Setting"
-
-            />
-        <item
-            android:id="@+id/drawerViewItem7"
-            android:icon="@drawable/email_feedback_icon"
-            android:title="Email feedback"
-
-            />
-        <item
-            android:id="@+id/drawerViewItem8"
-            android:icon="@drawable/logout_icon"
-            android:title="Logout"
-
-            />
-
+        <item android:title="Others">
+            <menu>
+                <item
+                    android:id="@+id/drawerViewItem6"
+                    android:icon="@drawable/nav_setting_icon"
+                    android:title="Setting" />
+                <item
+                    android:id="@+id/drawerViewItem7"
+                    android:icon="@drawable/nav_email_feedback_icon"
+                    android:title="Email feedback" />
+                <item
+                    android:id="@+id/drawerViewItem8"
+                    android:icon="@drawable/nav_logout_icon"
+                    android:title="Logout" />
+            </menu>
+        </item>
 
     </group>
 
