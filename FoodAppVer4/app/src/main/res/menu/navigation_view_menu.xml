@@ -19,15 +19,16 @@
                     android:id="@+id/drawerViewItem2"
                     android:icon="@drawable/nav_find_by_distance_icon"
                     android:title="Find by Distance" />
-                <item
-                    android:id="@+id/drawerViewItem3"
-                    android:icon="@drawable/nav_suggest_res_icon"
-                    android:title="Suggest Restaurant" />
+
             </menu>
         </item>
 
         <item android:title="Social">
             <menu>
+                <item
+                    android:id="@+id/drawerViewItem3"
+                    android:icon="@drawable/nav_notification_icon"
+                    android:title="Notification" />
                 <item
                     android:id="@+id/drawerViewItem4"
                     android:icon="@drawable/nav_profile_icon"

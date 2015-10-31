@@ -31,13 +31,17 @@
             android:value="@string/app_id" />
 
         <activity
-            android:name=".TestActtivity"
+            android:name=".home_screen.HomeActivity"
             android:label="@string/title_activity_maps">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity android:name=".restaurant_screen.Restaurant_Page_Activity">
+
         </activity>
 
         <activity

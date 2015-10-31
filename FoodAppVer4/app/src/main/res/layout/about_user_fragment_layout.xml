@@ -1,270 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="170dp"
-        android:background="@color/gray_color_2"
-        android:layout_weight="0.3"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/cover_page_user"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:paddingBottom="15dp"
-            android:paddingLeft="20dp"
-            android:gravity="center"
-            android:textSize="26dp"
-            android:textColor="@color/white_color"
-            android:text="Theodora Kalash"/>
-
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/true_white_color"
-        android:paddingTop="15dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal">
-
-        <!--Friends number-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:background="@color/gray_color_2"
+            android:layout_weight="0.3"
             android:orientation="vertical">
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="13sp"
-                android:textColor="@color/gray_color"
-                android:text="Friends"/>
+                android:layout_height="170dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cover_page_user"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="5dp"
+                android:layout_gravity="bottom|left"
+                android:paddingBottom="15dp"
+                android:paddingLeft="20dp"
                 android:gravity="center"
-                android:textSize="29sp"
-                android:text="123"/>
+                android:textSize="26dp"
+                android:textColor="@color/white_color"
+                android:text="Theodora Kalash"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/true_white_color"
+            android:paddingTop="15dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal">
+
+            <!--Friends number-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_color"
+                    android:text="Friends"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    android:textSize="29sp"
+                    android:text="123"/>
+
+            </LinearLayout>
+
+            <!--Photo number-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_color"
+                    android:text="Photos"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    android:textSize="29sp"
+                    android:text="26"/>
+
+            </LinearLayout>
+
+            <!--Post number-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_color"
+                    android:text="Post"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    android:textSize="29sp"
+                    android:text="123"/>
+
+            </LinearLayout>
+
+            <!--Checkin number-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:textColor="@color/gray_color"
+                    android:text="Check In"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:gravity="center"
+                    android:textSize="29sp"
+                    android:text="123"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <!--Photo number-->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:background="@color/gray_color_2"
+            android:layout_weight="0.5"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="13sp"
-                android:textColor="@color/gray_color"
-                android:text="Photos"/>
+                android:paddingLeft="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-            <TextView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_fresh"
+                    android:textSize="16dp"
+                    android:text="LIVE IN"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Ha Dong, Ha Noi"/>
+
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:background="@color/gray_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:gravity="center"
-                android:textSize="29sp"
-                android:text="26"/>
+                android:paddingLeft="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_fresh"
+                    android:textSize="16dp"
+                    android:text="GENDER"/>
 
-        <!--Post number-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Female"/>
 
-            <TextView
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="13sp"
-                android:textColor="@color/gray_color"
-                android:text="Post"/>
+                android:layout_height="1px"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:background="@color/gray_color"/>
 
-            <TextView
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_fresh"
+                    android:textSize="16dp"
+                    android:text="DATE OF BIRTH"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="12 Aug 1992"/>
+
+            </LinearLayout>
+
+            <View
                 android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="11dp"
+                android:background="@color/gray_color"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:gravity="center"
-                android:textSize="29sp"
-                android:text="123"/>
+                android:paddingLeft="20dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="9dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue_fresh"
+                    android:textSize="16dp"
+                    android:text="EMAIL"/>
 
-        <!--Checkin number-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="leo.talkash@gmail.com"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textSize="13sp"
-                android:textColor="@color/gray_color"
-                android:text="Check In"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:gravity="center"
-                android:textSize="29sp"
-                android:text="123"/>
+            </LinearLayout>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray_color_2"
-        android:layout_weight="0.5"
-        android:orientation="vertical">
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/change_infor"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="9dp"
-            android:paddingBottom="9dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue_fresh"
-                android:textSize="16dp"
-                android:text="LIVE IN"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Ha Dong, Ha Noi"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="11dp"
-            android:layout_marginRight="11dp"
-            android:background="@color/gray_color"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="9dp"
-            android:paddingBottom="9dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue_fresh"
-                android:textSize="16dp"
-                android:text="GENDER"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Female"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="11dp"
-            android:layout_marginRight="11dp"
-            android:background="@color/gray_color"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="9dp"
-            android:paddingBottom="9dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue_fresh"
-                android:textSize="16dp"
-                android:text="DATE OF BIRTH"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="12 Aug 1992"/>
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="11dp"
-            android:layout_marginRight="11dp"
-            android:background="@color/gray_color"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:paddingTop="9dp"
-            android:paddingBottom="9dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue_fresh"
-                android:textSize="16dp"
-                android:text="EMAIL"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="leo.talkash@gmail.com"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+</FrameLayout>
 

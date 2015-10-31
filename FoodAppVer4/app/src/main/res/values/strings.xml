@@ -254,4 +254,13 @@
         <item>124</item>
     </string-array>
 
+    <!--NAME OF NOTICE-->
+    <string-array name="name_of_notice">
+        <item>Comment on your photo</item>
+        <item>Like on your photo</item>
+        <item>Reply on your comment</item>
+        <item>Share on your photo</item>
+        <item>Share on your comment</item>
+    </string-array>
+
 </resources>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,14 +19,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:background="@color/gray_color_2"
-                android:layout_weight="0.3"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cover_page_user"/>
+                    android:src="@drawable/cover_rest_4"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -35,16 +36,15 @@
                     android:gravity="center"
                     android:textSize="26dp"
                     android:textColor="@color/white_color"
-                    android:text="Theodora Kalash"/>
+                    android:text="PIZZA LUXE"/>
 
             </FrameLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:background="@color/true_white_color"
                 android:paddingTop="15dp"
-                android:layout_weight="0.2"
                 android:orientation="horizontal">
 
                 <!--Friends number-->
@@ -151,9 +151,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="270dp"
                 android:background="@color/gray_color_2"
-                android:layout_weight="0.5"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -201,13 +200,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/blue_fresh"
                         android:textSize="16dp"
-                        android:text="GENDER"/>
+                        android:text="NAME TAG"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
-                        android:text="Female"/>
+                        android:text="Do An Nhanh"/>
 
                 </LinearLayout>
 
@@ -232,13 +231,13 @@
                         android:layout_height="wrap_content"
                         android:textColor="@color/blue_fresh"
                         android:textSize="16dp"
-                        android:text="DATE OF BIRTH"/>
+                        android:text="CONTACT"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20dp"
-                        android:text="12 Aug 1992"/>
+                        android:text="0128 571 5951"/>
 
                 </LinearLayout>
 
@@ -273,10 +272,127 @@
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginRight="11dp"
+                    android:background="@color/gray_color"/>
+
             </LinearLayout>
+
+            <ListView
+                android:id="@+id/commentRestLv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/black_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/upload_comment_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white_color"
+                android:textSize="12sp"
+                android:text="Bình  Luận"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/upload_img_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white_color"
+                android:textSize="12sp"
+                android:text="Tải Ảnh"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/like_heart_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/hong_heart"
+                android:textSize="12sp"
+                android:text="Like"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingTop="2dp"
+                android:layout_gravity="center"
+                android:src="@drawable/check_in_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white_color"
+                android:textSize="12sp"
+                android:text="Check in"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

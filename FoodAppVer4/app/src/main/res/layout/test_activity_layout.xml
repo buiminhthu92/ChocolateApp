@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <fragment
-        android:id="@+id/fragment1"
-        android:name="com.gabbybears.foodappver4.restaurant_screen.Restaurant_Fragment_Adapter"
+    <LinearLayout
+        android:id="@+id/testView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
 </LinearLayout>

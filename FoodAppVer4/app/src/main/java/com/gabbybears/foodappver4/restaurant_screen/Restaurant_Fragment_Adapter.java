@@ -25,7 +25,7 @@ public class Restaurant_Fragment_Adapter extends Fragment {
         /**
          *Inflate tab_layout and setup Views.
          */
-        View x =  inflater.inflate(R.layout.profile_layout,null);
+        View x =  inflater.inflate(R.layout.restaurant_fragment_layout,null);
         tabLayout = (TabLayout) x.findViewById(R.id.tabs);
         viewPager = (ViewPager) x.findViewById(R.id.viewpager);
 
@@ -87,9 +87,9 @@ public class Restaurant_Fragment_Adapter extends Fragment {
 
             switch (position){
                 case 0 :
-                    return "RESTAURANT";
+                    return "FEED";
                 case 1 :
-                    return "PHOTO";
+                    return "PHOTOS";
             }
             return null;
         }

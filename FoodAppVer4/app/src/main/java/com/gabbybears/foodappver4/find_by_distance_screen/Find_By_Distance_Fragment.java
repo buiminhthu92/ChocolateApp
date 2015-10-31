@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import android.annotation.SuppressLint;
 import android.app.ListFragment;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +18,9 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.TestFragment;
+import com.gabbybears.foodappver4.restaurant_screen.Restaurant_Fragment_Adapter;
+import com.gabbybears.foodappver4.restaurant_screen.Restaurant_Page_Activity;
 
 public class Find_By_Distance_Fragment extends android.support.v4.app.ListFragment implements OnItemClickListener {
 
@@ -28,6 +35,10 @@ public class Find_By_Distance_Fragment extends android.support.v4.app.ListFragme
 
     Find_By_Distance_Adapter adapter;
     private List<Find_By_Distance_Item> rowItems;
+
+    private static final String TAG = "SecondFragmentFindByDistance";
+    Fragment fragment = null;
+    FragmentManager fragmentManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,9 +88,10 @@ public class Find_By_Distance_Fragment extends android.support.v4.app.ListFragme
     public void onItemClick(AdapterView<?> parent, View view, int position,
                             long id) {
 
-        Toast.makeText(getActivity(), nameRestArr[position], Toast.LENGTH_SHORT)
-                .show();
+        Toast.makeText(getActivity(), nameRestArr[position], Toast.LENGTH_SHORT).show();
 
+        Intent intent = new Intent(getActivity(), Restaurant_Page_Activity.class);
+        startActivity(intent);
     }
 
 }

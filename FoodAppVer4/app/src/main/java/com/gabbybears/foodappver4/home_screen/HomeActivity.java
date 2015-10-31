@@ -13,15 +13,18 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.feedback_email_screen.Feedback_Email_Fragment;
 import com.gabbybears.foodappver4.find_by_distance_screen.Find_By_Distance_Fragment;
-import com.gabbybears.foodappver4.fragments_screen.List_Page_Fragment;
 import com.gabbybears.foodappver4.fragments_screen.Map_With_Tag_Fragment;
-import com.gabbybears.foodappver4.fragments_screen.Request_Res_Fragment;
 import com.gabbybears.foodappver4.friends_screen.Friends_Fragment_Adapter;
 import com.gabbybears.foodappver4.profile_screen.Profile_Fragment_Adapter;
+import com.gabbybears.foodappver4.restaurant_screen.Restaurant_Fragment_Adapter;
+import com.gabbybears.foodappver4.setting_screen.Setting_Fragment;
 
 /**
  * Created by Android on 10/8/2015.
@@ -75,13 +78,12 @@ public class HomeActivity extends AppCompatActivity {
                         //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
                         fragment = new Find_By_Distance_Fragment();
 
-
                         break;
                     }
 
                     case R.id.drawerViewItem3:{
-                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
-                        fragment = new Request_Res_Fragment();
+                        //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
+                        fragment = new Restaurant_Fragment_Adapter();
 
                         break;
                     }
@@ -99,15 +101,21 @@ public class HomeActivity extends AppCompatActivity {
 
                         break;
                     }
+
+                    case R.id.drawerViewItem6:{
+                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+                        fragment = new Setting_Fragment();
+
+                        break;
+                    }
+
+                    case R.id.drawerViewItem7:{
+                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+                        fragment = new Feedback_Email_Fragment();
+
+                        break;
+                    }
                 }
-
-
-                /*if (fragment != null) {
-                    //fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction transaction = fragmentManager.beginTransaction();
-                    transaction.replace(R.id.group, fragment);
-                    transaction.commit();
-                }*/
 
                 drawerLayoutgesamt.closeDrawers();
                 menuItem.setChecked(true);
@@ -181,5 +189,9 @@ public class HomeActivity extends AppCompatActivity {
             ft.addToBackStack(backStateName);
             ft.commit();
         }
+    }
+
+    public void ClickAvar(View v) {
+        Toast.makeText(HomeActivity.this, "You click avar", Toast.LENGTH_SHORT).show();
     }
 }
