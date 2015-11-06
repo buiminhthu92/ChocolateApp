@@ -263,4 +263,13 @@
         <item>Share on your comment</item>
     </string-array>
 
+    <!--STATE OF NOTICE-->
+    <array name="state_of_noticce">
+        <item>@drawable/unread_icon</item>
+        <item>@drawable/unread_icon</item>
+        <item>@drawable/unread_icon</item>
+        <item>@drawable/read_icon</item>
+        <item>@drawable/read_icon</item>
+    </array>
+
 </resources>

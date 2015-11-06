@@ -15,6 +15,6 @@
         android:id="@+id/barFmtIp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        class="com.gabbybears.foodappver4.fragments_screen.Map_With_Tag_Fragment"/>
+        class="com.gabbybears.foodappver4.home_screen.Map_With_Tag_Fragment"/>
 
 </LinearLayout>

@@ -317,7 +317,7 @@
                 android:gravity="center_horizontal"
                 android:textColor="@color/white_color"
                 android:textSize="12sp"
-                android:text="Bình  Luận"/>
+                android:text="Bình Luận"/>
 
         </LinearLayout>
 

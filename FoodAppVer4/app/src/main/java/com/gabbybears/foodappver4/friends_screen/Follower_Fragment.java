@@ -1,5 +1,6 @@
 package com.gabbybears.foodappver4.friends_screen;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.friend_page_activity.Friend_Page_Activity;
 
 import java.util.ArrayList;
 
@@ -68,6 +70,9 @@ public class Follower_Fragment extends Fragment implements AdapterView.OnItemCli
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Toast.makeText(getActivity(), "you click" + String.valueOf(i), Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getActivity(), Friend_Page_Activity.class);
+        startActivity(intent);
     }
 }
 

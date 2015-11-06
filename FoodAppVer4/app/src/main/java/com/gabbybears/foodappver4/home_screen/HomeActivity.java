@@ -20,10 +20,9 @@ import android.widget.Toast;
 import com.gabbybears.foodappver4.R;
 import com.gabbybears.foodappver4.feedback_email_screen.Feedback_Email_Fragment;
 import com.gabbybears.foodappver4.find_by_distance_screen.Find_By_Distance_Fragment;
-import com.gabbybears.foodappver4.fragments_screen.Map_With_Tag_Fragment;
 import com.gabbybears.foodappver4.friends_screen.Friends_Fragment_Adapter;
+import com.gabbybears.foodappver4.notification_screen.Notification_Fragment;
 import com.gabbybears.foodappver4.profile_screen.Profile_Fragment_Adapter;
-import com.gabbybears.foodappver4.restaurant_screen.Restaurant_Fragment_Adapter;
 import com.gabbybears.foodappver4.setting_screen.Setting_Fragment;
 
 /**
@@ -40,6 +39,8 @@ public class HomeActivity extends AppCompatActivity {
     ImageView ivanzeige;
     Fragment fragment = null;
     FragmentManager fragmentManager;
+
+    ImageView icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +84,7 @@ public class HomeActivity extends AppCompatActivity {
 
                     case R.id.drawerViewItem3:{
                         //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
-                        fragment = new Restaurant_Fragment_Adapter();
+                        fragment = new Notification_Fragment();
 
                         break;
                     }
@@ -137,6 +138,7 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -193,5 +195,16 @@ public class HomeActivity extends AppCompatActivity {
 
     public void ClickAvar(View v) {
         Toast.makeText(HomeActivity.this, "You click avar", Toast.LENGTH_SHORT).show();
+        FragmentManager manager = getSupportFragmentManager();
+
+        for(int i = 0; i < manager.getBackStackEntryCount(); ++i) {
+            manager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        }
+
+        FragmentTransaction ft = manager.beginTransaction();
+        ft.replace(R.id.group, new Notification_Fragment());
+        ft.commit();
+
+        drawerLayoutgesamt.closeDrawers();
     }
 }

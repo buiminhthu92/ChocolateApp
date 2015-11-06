@@ -21,7 +21,7 @@ public class Restaurant_Page_Activity extends FragmentActivity {
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.testView, new Restaurant_Fragment_Adapter());
+        transaction.replace(R.id.restPageView, new Restaurant_Fragment_Adapter());
         transaction.commit();
     }
 }

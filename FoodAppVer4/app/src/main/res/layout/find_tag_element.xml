@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="40dp"
     android:paddingLeft="118dp"
+    android:background="@color/material_blue_grey_800"
     android:orientation="horizontal">
 
     <ImageView
@@ -19,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:textSize="16dp"
+        android:textColor="@color/organge"
         android:gravity="center_vertical"
         android:text="Bình dân" />
 

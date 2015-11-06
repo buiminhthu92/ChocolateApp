@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.gabbybears.foodappver4.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -16,6 +17,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.oguzdev.circularfloatingactionmenu.library.FloatingActionButton;
 
 /**
  * Created by Android on 10/8/2015.
@@ -29,6 +31,12 @@ public class MapFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.map_fragment_layout, container, false);
+
+        //Create Floating Action Button in there
+        //ImageView imageView = new ImageView(getActivity());
+        //FloatingActionButton actionButton = new FloatingActionButton.Builder(getClass());
+
+        //End Create Floating Action Button
 
         mMapView = (MapView)view.findViewById(R.id.mapView);
         mMapView.onCreate(savedInstanceState);

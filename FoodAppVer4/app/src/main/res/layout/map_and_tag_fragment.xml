@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <Spinner
@@ -11,11 +11,53 @@
         android:background="@color/blue_fresh">
 
     </Spinner>
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/new_mapView"
-        class="com.google.android.gms.maps.SupportMapFragment"
+    
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/new_mapView"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="11dp"
+            android:layout_gravity="bottom|center">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:src="@drawable/bg_two_btn"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="17dp"
+                    android:gravity="center"
+                    android:background="@drawable/send_message_icon"/>
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:background="@drawable/call_rest_icon2"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
 
 </LinearLayout>

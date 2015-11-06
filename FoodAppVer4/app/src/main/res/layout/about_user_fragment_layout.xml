@@ -274,11 +274,11 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_gravity="bottom|right"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/change_infor"/>
 
 </FrameLayout>

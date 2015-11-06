@@ -7,7 +7,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
 import com.gabbybears.foodappver4.profile_screen.Feed_User_Adapter;
@@ -19,7 +23,7 @@ import java.util.List;
 /**
  * Created by Android on 10/28/2015.
  */
-public class Feed_Restaurant_Fragment extends Fragment{
+public class Feed_Restaurant_Fragment extends Fragment implements AdapterView.OnItemClickListener {
 
     private ListView restFeedLv;
     private List<Feed_User_Item> feedRestArr;
@@ -48,6 +52,9 @@ public class Feed_Restaurant_Fragment extends Fragment{
 
         adapter = new Feed_User_Adapter(getActivity(), feedRestArr);
         restFeedLv.setAdapter(adapter);
+        restFeedLv.setOnItemClickListener(this);
+
+        setListViewHeightBasedOnChildren(restFeedLv);
 
         return v;
     }
@@ -76,5 +83,35 @@ public class Feed_Restaurant_Fragment extends Fragment{
 
             feedRestArr.add(items);
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        Toast.makeText(getActivity(), menutitles[position], Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    /**** Method for Setting the Height of the ListView dynamically.
+     **** Hack to fix the issue of not showing all the items of the ListView
+     **** when placed inside a ScrollView  ****/
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null)
+            return;
+
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.UNSPECIFIED);
+        int totalHeight = 0;
+        View view = null;
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            view = listAdapter.getView(i, view, listView);
+            if (i == 0)
+                view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, AbsListView.LayoutParams.WRAP_CONTENT));
+
+            view.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += view.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
     }
 }
