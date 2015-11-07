@@ -46,13 +46,15 @@
                     android:layout_height="45dp"
                     android:layout_marginRight="17dp"
                     android:gravity="center"
-                    android:background="@drawable/send_message_icon"/>
+                    android:background="@drawable/send_message_icon"
+                    android:onClick="DirectTouch"/>
 
                 <Button
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:gravity="center"
-                    android:background="@drawable/call_rest_icon2"/>
+                    android:background="@drawable/call_rest_icon2"
+                    android:onClick="CallTouch"/>
 
             </LinearLayout>
 

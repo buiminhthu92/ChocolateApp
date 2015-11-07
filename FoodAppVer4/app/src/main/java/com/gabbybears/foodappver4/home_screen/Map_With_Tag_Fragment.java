@@ -2,6 +2,7 @@ package com.gabbybears.foodappver4.home_screen;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -9,6 +10,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,19 +22,33 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.api_retrofit.IApiMethods;
+import com.gabbybears.foodappver4.api_retrofit.Curator;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+
+import java.util.ArrayList;
+
+import retrofit.Callback;
+import retrofit.RestAdapter;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 /**
  * Created by Android on 10/17/2015.
  */
-public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnItemSelectedListener, LocationListener{
+public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnItemSelectedListener, GoogleMap.OnMarkerClickListener {
     MapView mMapView;
     private GoogleMap googleMap;
     LatLng myPosition;
@@ -41,6 +57,10 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
     TypedArray images;
     private Spinner mySpinner;
 
+    private static final String API_URL = "http://haiha711-001-site1.1tempurl.com";
+    private static final String API_KEY = "";
+    private Marker touchMarker;
+    private Boolean firstZoom = true;
 
     @Nullable
     @Override
@@ -57,62 +77,37 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
         mySpinner.setOnItemSelectedListener(this);
 
         //Mapview
-        mMapView = (MapView)view.findViewById(R.id.new_mapView);
+        mMapView = (MapView) view.findViewById(R.id.new_mapView);
         mMapView.onCreate(savedInstanceState);
 
         mMapView.onResume();
 
         try {
             MapsInitializer.initialize(getActivity().getApplicationContext());
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         googleMap = mMapView.getMap();
 
         //Enable my location on google map
-        googleMap.setMyLocationEnabled(true);
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-        String provider = locationManager.getBestProvider(criteria, true);
-        Location location = locationManager.getLastKnownLocation(provider);
-        if(location != null) {
-            double latitude = location.getLatitude();
-            double longitude = location.getLongitude();
+        //googleMap.setMyLocationEnabled(true);
+        centerMapOnMyLocation();
 
-            myPosition = new LatLng(latitude, longitude);
+        /*googleMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
+            @Override
+            public void onMyLocationChange(Location location) {
+                if(firstZoom) {
+                    CameraUpdate center=CameraUpdateFactory.newLatLng(new LatLng(location.getLatitude(), location.getLongitude()));
+                    CameraUpdate zoom=CameraUpdateFactory.zoomTo(11);
+                    googleMap.moveCamera(center);
+                    googleMap.animateCamera(zoom);
+                    firstZoom = false;
+                }
+            }
+        });*/
 
-            //create maker
-            MarkerOptions maker = new MarkerOptions().position(
-                    myPosition).title("Hello Map");
-
-            //Change maker icon
-            maker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-
-            //adding maker
-            googleMap.addMarker(maker);
-            CameraPosition cameraPosition = new CameraPosition.Builder()
-                    .target(myPosition).zoom(12).build();
-            googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
-        }
-
-        // latitude and longitude
-        /*double latitude = 17.385044;
-        double longitude = 78.486671;
-
-        //create maker
-        MarkerOptions maker = new MarkerOptions().position(
-                new LatLng(latitude, longitude)).title("Hello Map");
-
-        //Change maker icon
-        maker.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE));
-
-        //adding maker
-        googleMap.addMarker(maker);
-        CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(new LatLng(17.385044, 78.486671)).zoom(12).build();
-        googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));*/
+        googleMap.setOnMarkerClickListener(this);
 
         return view;
     }
@@ -145,6 +140,41 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
         String pos = String.valueOf(position);
         Toast.makeText(getActivity(), pos, Toast.LENGTH_SHORT).show();
+
+        switch (position) {
+            case 0:
+                googleMap.clear();
+                SetTagOnMap("0");
+                break;
+            case 1:
+                googleMap.clear();
+                SetTagOnMap("1");
+                break;
+            case 2:
+                googleMap.clear();
+                SetTagOnMap("2");
+                break;
+            case 3:
+                googleMap.clear();
+                SetTagOnMap("3");
+                break;
+            case 4:
+                googleMap.clear();
+                SetTagOnMap("4");
+                break;
+            case 5:
+                googleMap.clear();
+                SetTagOnMap("5");
+                break;
+            case 6:
+                googleMap.clear();
+                SetTagOnMap("6");
+                break;
+            case 7:
+                googleMap.clear();
+                SetTagOnMap("7");
+                break;
+        }
     }
 
     @Override
@@ -152,7 +182,7 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
 
     }
 
-    @Override
+    /*@Override
     public void onLocationChanged(Location location) {
 
     }
@@ -170,12 +200,25 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
     @Override
     public void onProviderDisabled(String s) {
 
+    }*/
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+
+        String str = marker.getTitle().toString();
+        Toast.makeText(getActivity(), str, Toast.LENGTH_SHORT).show();
+
+        touchMarker = marker;
+
+        return false;
     }
+
 
     public class MyAdapter extends ArrayAdapter<String> {
         public MyAdapter(Context ctx, int txtViewResourceId, String[] objects) {
             super(ctx, txtViewResourceId, objects);
         }
+
         @Override
         public View getDropDownView(int position, View cnvtView, ViewGroup prnt) {
             return getCustomView(position, cnvtView, prnt);
@@ -196,6 +239,97 @@ public class Map_With_Tag_Fragment extends Fragment implements AdapterView.OnIte
             left_icon.setImageResource(images.getResourceId(position, -1));
 
             return mySpinner;
+        }
+    }
+
+
+    public void SetTagOnMap(String i) {
+        //Toast.makeText(getActivity(), "Co chay", Toast.LENGTH_SHORT).show();
+
+        RestAdapter restAdapter = new RestAdapter.Builder()
+                .setEndpoint(API_URL)
+                .build();
+        IApiMethods methods = restAdapter.create(IApiMethods.class);
+        Callback callback = new Callback() {
+            @Override
+            public void success(Object o, Response response) {
+                Curator curators = (Curator) o;
+
+                for (Curator.Dataset restaurent : curators.restaurent) {
+                    // latitude and longitude
+                    double longitude = Double.parseDouble(restaurent.latitudeY);
+                    double latitude = Double.parseDouble(restaurent.longitudeX);
+
+                    createMarker(latitude, longitude, restaurent.restName, restaurent.address + " /" + restaurent.phone, R.drawable.location51);
+                    Log.d("TAG_VALUE", latitude + ", " + longitude);
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError retrofitError) {
+
+            }
+        };
+
+        switch (i) {
+            case "0":
+                methods.getCurators(API_KEY, callback);
+                break;
+            case "1":
+                methods.getCurators1(API_KEY, callback);
+                break;
+            case "2":
+                methods.getCurators2(API_KEY, callback);
+                break;
+            case "3":
+                methods.getCurators3(API_KEY, callback);
+                break;
+            case "4":
+                methods.getCurators4(API_KEY, callback);
+                break;
+            case "5":
+                methods.getCurators5(API_KEY, callback);
+                break;
+            case "6":
+                methods.getCurators6(API_KEY, callback);
+                break;
+            case "7":
+                methods.getCurators7(API_KEY, callback);
+                break;
+        }
+        //methods.getCurators(API_KEY, callback);
+    }
+
+    protected Marker createMarker(double latitude, double longitude, String title, String snippet, int iconResID) {
+
+        return googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(latitude, longitude))
+                .anchor(0.5f, 0.5f)
+                .title(title)
+                .snippet(snippet)
+        .icon(BitmapDescriptorFactory.fromResource(iconResID)));
+    }
+
+    public void CallTouch(View v) {
+        if (touchMarker != null) {
+            Toast.makeText(getActivity(), "Run in sub string", Toast.LENGTH_SHORT).show();
+            String str = touchMarker.getSnippet().toString();
+            String[] phoneNum = str.split("/");
+            Log.d("PHONE", phoneNum[0]);
+        }
+    }
+
+    private void centerMapOnMyLocation() {
+
+        googleMap.setMyLocationEnabled(true);
+
+        Location location = googleMap.getMyLocation();
+
+        if (location != null) {
+            LatLng myLocation = new LatLng(location.getLatitude(),
+                    location.getLongitude());
+            googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(myLocation,
+                    12));
         }
     }
 }
