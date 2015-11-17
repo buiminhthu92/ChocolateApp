@@ -13,17 +13,18 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_gravity="top"
-            android:background="@color/blue_fresh">
+            android:background="@color/material_blue_grey_800">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:textSize="20sp"
-                android:textColor="@color/white_color"
+                android:textColor="@color/organge"
                 android:text="COMMENT"/>
 
             <Button
+                android:id="@+id/backBtnComtAct"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:padding="4dp"
@@ -36,8 +37,8 @@
                 android:layout_gravity="right"
                 android:text="POST"
                 android:textSize="20sp"
-                android:textColor="@color/white_color"
-                android:background="@color/blue_fresh"/>
+                android:textColor="@color/organge"
+                android:background="@color/material_blue_grey_800"/>
 
         </FrameLayout>
 
@@ -85,24 +86,19 @@
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="Header (doesn't must)"
-            android:layout_marginTop="11dp"
-            android:layout_marginBottom="7dp"
-            android:background="@drawable/white_bg_2"/>
-
-        <EditText
-            android:layout_width="match_parent"
             android:layout_height="120dp"
             android:lines="4"
+            android:gravity="top"
+            android:padding="5dp"
             android:text="Content in there"
-            android:background="@drawable/white_bg_2"
+            android:textColor="@color/gray_blue_color"
+            android:background="@drawable/edittext"
             android:layout_marginBottom="7dp"/>
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="11dp">
+            android:layout_height="250dp"
+            android:paddingTop="7dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -117,8 +113,8 @@
                 android:src="@drawable/black_background"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:scaleType="fitCenter"
                 android:layout_gravity="center"
                 android:src="@drawable/show_more_button_icon"/>

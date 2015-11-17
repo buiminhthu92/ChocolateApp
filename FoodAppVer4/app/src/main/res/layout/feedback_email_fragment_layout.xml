@@ -20,8 +20,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:paddingTop="20dp"
                 android:src="@drawable/app_icon_test"/>
@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:gravity="center"
-                android:textSize="32sp"
+                android:textSize="25sp"
                 android:textColor="@color/white_color"
                 android:text="Send to Chocolate"/>
 
@@ -41,7 +41,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:orientation="vertical"
-                android:background="@drawable/white_bg">
+                android:background="@drawable/edittext">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -118,7 +118,7 @@
             </LinearLayout>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="120dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"

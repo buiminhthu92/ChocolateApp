@@ -12,8 +12,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gabbybears.foodappver4.R;
-import com.gabbybears.foodappver4.TestFragment;
-import com.gabbybears.foodappver4.test_list_fragment.MyListFragment;
 
 public class Profile_Fragment_Adapter extends Fragment {
 

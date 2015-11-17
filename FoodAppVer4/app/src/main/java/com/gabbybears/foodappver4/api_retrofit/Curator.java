@@ -12,5 +12,6 @@ public class Curator {
         public String restName;
         public String address;
         public String phone;
+        public String tagId;
     }
 }
