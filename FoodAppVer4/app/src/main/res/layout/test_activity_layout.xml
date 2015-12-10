@@ -6,9 +6,12 @@
     android:orientation="vertical" >
 
     <ImageView
-        android:id="@+id/testShowImg"
+        android:id="@+id/testSwipeList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitCenter"/>
+        android:scaleType="centerCrop"
+        android:orientation="vertical">
+
+    </ImageView>
 
 </LinearLayout>

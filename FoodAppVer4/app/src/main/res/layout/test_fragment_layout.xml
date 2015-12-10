@@ -11,10 +11,4 @@
         android:text="@string/hello_blank_fragment"
         android:textSize="25dp"/>
 
-    <fragment
-        android:id="@+id/barFmtIp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        class="com.gabbybears.foodappver4.home_screen.Map_With_Tag_Fragment"/>
-
 </LinearLayout>

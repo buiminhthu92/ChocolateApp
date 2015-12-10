@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btPv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="P"/>
+
+        <Button
+            android:id="@+id/btFB"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:text="TP"/>
+
+        <Button
+            android:id="@+id/btPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="C"/>
+
+        <Button
+            android:id="@+id/btFF"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:text="TT"/>
+
+        <Button
+            android:id="@+id/btNxt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="N"/>
+
+    </LinearLayout>
+
+</LinearLayout>

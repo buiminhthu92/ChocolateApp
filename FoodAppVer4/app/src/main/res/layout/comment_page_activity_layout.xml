@@ -101,6 +101,7 @@
             android:paddingTop="7dp">
 
             <ImageView
+                android:id="@+id/contentImageUpload"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -113,6 +114,7 @@
                 android:src="@drawable/black_background"/>
 
             <ImageView
+                android:id="@+id/browseImageBtn"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:scaleType="fitCenter"

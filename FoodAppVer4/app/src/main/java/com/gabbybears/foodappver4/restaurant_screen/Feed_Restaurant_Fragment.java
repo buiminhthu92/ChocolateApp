@@ -1,5 +1,6 @@
 package com.gabbybears.foodappver4.restaurant_screen;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,11 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.comment_page_screen.Comment_Page_Activity;
 import com.gabbybears.foodappver4.profile_screen.Feed_User_Adapter;
 import com.gabbybears.foodappver4.profile_screen.Feed_User_Item;
 
@@ -39,6 +43,8 @@ public class Feed_Restaurant_Fragment extends Fragment implements AdapterView.On
     TypedArray imgArr;
     TypedArray avarArr;
 
+    ImageView showCmt;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -46,6 +52,15 @@ public class Feed_Restaurant_Fragment extends Fragment implements AdapterView.On
 
         restFeedLv = (ListView) v.findViewById(R.id.commentRestLv);
         feedRestArr = new ArrayList<Feed_User_Item>();
+
+        showCmt = (ImageView) v.findViewById(R.id.showCommentAct);
+        showCmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Comment_Page_Activity.class);
+                getActivity().startActivity(intent);
+            }
+        });
 
         CreateDataRest();
 
@@ -114,4 +129,5 @@ public class Feed_Restaurant_Fragment extends Fragment implements AdapterView.On
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
     }
+
 }

@@ -47,9 +47,9 @@ public class MainActivity extends AppCompatActivity{
 
 
                 if (menuItem.getItemId() == R.id.nav_item_sent) {
-                    FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+                    /*FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.containerView,new SentFragment()).commit();
-
+*/
                 }
 
                 if (menuItem.getItemId() == R.id.nav_item_inbox) {

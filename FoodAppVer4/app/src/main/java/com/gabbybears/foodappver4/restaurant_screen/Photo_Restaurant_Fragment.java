@@ -65,5 +65,6 @@ public class Photo_Restaurant_Fragment extends Fragment implements AdapterView.O
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Toast.makeText(getActivity(), "you click" + String.valueOf(i), Toast.LENGTH_SHORT).show();
+
     }
 }

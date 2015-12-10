@@ -5,5 +5,10 @@
 
         <item name="spinBars">true</item>
 
+        <item name="android:colorPrimary">@color/PrimaryColor</item>
+        <item name="android:colorPrimaryDark">@color/PrimaryDarkColor</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+
     </style>
 </resources>

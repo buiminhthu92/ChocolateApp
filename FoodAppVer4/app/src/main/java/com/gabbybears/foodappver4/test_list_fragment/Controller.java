@@ -1,7 +1,6 @@
 package com.gabbybears.foodappver4.test_list_fragment;
 
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -35,16 +34,13 @@ public class Controller {
                 try {
                     JSONArray array = new JSONArray(s);
 
-                    for (int i = 0; i < array.length(); i++) {
+                    for(int i = 0; i < array.length(); i++) {
                         JSONObject object = array.getJSONObject(i);
 
-                        Rest_Item_Test flower = new Rest_Item_Test.Builder()
-                                .setNameRest(object.getString("restName"))
-                                .setAddressRest(object.getString("address"))
-                                .setNameTagRest(object.getString("tagName"))
-                                .setLatitude(object.getDouble("latitudeY"))
-                                .setLongtitude(object.getDouble("longitudeX"))
-                                .setNameCoverRest(object.getString("imageName"))
+                        Flower flower = new Flower.Builder()
+                                .setCategory(object.getString("tagName"))
+                                .setPhoto(object.getString("imageName"))
+                                .setName(object.getString("restName"))
                                 .build();
 
                         mListener.onFetchProgress(flower);
@@ -70,8 +66,8 @@ public class Controller {
     public interface FlowerCallbackListener {
 
         void onFetchStart();
-        void onFetchProgress(Rest_Item_Test flower);
-        void onFetchProgress(List<Rest_Item_Test> flowerList);
+        void onFetchProgress(Flower flower);
+        void onFetchProgress(List<Flower> flowerList);
         void onFetchComplete();
         void onFetchFailed();
     }

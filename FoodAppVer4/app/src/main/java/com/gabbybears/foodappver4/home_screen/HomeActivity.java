@@ -1,6 +1,11 @@
 package com.gabbybears.foodappver4.home_screen;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -15,15 +20,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.RoundImage;
+import com.gabbybears.foodappver4.RoundedTransformation;
 import com.gabbybears.foodappver4.feedback_email_screen.Feedback_Email_Fragment;
 import com.gabbybears.foodappver4.find_by_distance_screen.Find_By_Distance_Fragment;
 import com.gabbybears.foodappver4.friends_screen.Friends_Fragment_Adapter;
 import com.gabbybears.foodappver4.notification_screen.Notification_Fragment;
 import com.gabbybears.foodappver4.profile_screen.Profile_Fragment_Adapter;
 import com.gabbybears.foodappver4.setting_screen.Setting_Fragment;
+import com.gabbybears.foodappver4.start_screen.MainActivity;
+import com.gabbybears.foodappver4.start_screen.MainFragment;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by Android on 10/8/2015.
@@ -36,18 +47,35 @@ public class HomeActivity extends AppCompatActivity {
     ActionBarDrawerToggle drawerToggle;
     NavigationView navigationView;
 
-    ImageView ivanzeige;
     Fragment fragment = null;
     FragmentManager fragmentManager;
 
     ImageView icon;
+    private ImageView avarUserImg;
+    private TextView nameUser;
+
+    private static RoundImage myAvarRound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
 
-        // ivanzeige = (ImageView) findViewById(R.id.ivAnzeige);
+        avarUserImg = (ImageView) findViewById(R.id.imageUserAvar);
+        nameUser = (TextView) findViewById(R.id.nameUser);
+
+        Picasso.with(HomeActivity.this)
+                .load(MainFragment.uriImgUser)
+                .placeholder(R.drawable.default_img_user)
+                .transform(new RoundedTransformation(50, 0))
+                .into(avarUserImg);
+        nameUser.setText(MainFragment.nameUser);
+
+        /*BitmapDrawable drawable = (BitmapDrawable) avarUserImg.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+        myAvarRound = new RoundImage(bitmap);
+        avarUserImg.setImageDrawable(myAvarRound);*/
+
         fragmentManager = getSupportFragmentManager();
         fragment = new Map_With_Tag_Fragment();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -69,50 +97,58 @@ public class HomeActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
 
                     case R.id.drawerViewItem1:{
-                        // ivanzeige.setImageResource(R.drawable.ic_mood_grey600_18dp);
+
                         fragment = new Map_With_Tag_Fragment();
 
                         break;
                     }
 
                     case R.id.drawerViewItem2:{
-                        //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
+
                         fragment = new Find_By_Distance_Fragment();
 
                         break;
                     }
 
                     case R.id.drawerViewItem3:{
-                        //ivanzeige.setImageResource(R.drawable.ic_notifications_grey600_18dp);
+
                         fragment = new Notification_Fragment();
 
                         break;
                     }
 
                     case R.id.drawerViewItem4:{
-                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+
                         fragment = new Profile_Fragment_Adapter();
 
                         break;
                     }
 
                     case R.id.drawerViewItem5:{
-                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+
                         fragment = new Friends_Fragment_Adapter();
 
                         break;
                     }
 
                     case R.id.drawerViewItem6:{
-                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+
                         fragment = new Setting_Fragment();
 
                         break;
                     }
 
                     case R.id.drawerViewItem7:{
-                        // ivanzeige.setImageResource(R.drawable.ic_poll_grey600_18dp);
+
                         fragment = new Feedback_Email_Fragment();
+
+                        break;
+                    }
+
+                    case R.id.drawerViewItem8:{
+
+                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
+                        startActivity(intent);
 
                         break;
                     }
@@ -120,6 +156,8 @@ public class HomeActivity extends AppCompatActivity {
 
                 drawerLayoutgesamt.closeDrawers();
                 menuItem.setChecked(true);
+
+
 
                 replaceFragment(fragment);
 

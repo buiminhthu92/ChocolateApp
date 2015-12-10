@@ -66,7 +66,7 @@ public class Restaurant_Fragment_Adapter extends Fragment {
         {
             switch (position){
                 case 0 : return new Feed_Restaurant_Fragment();
-                case 1 : return new Photo_Restaurant_Fragment();
+                case 1 : return new New_Photo_Rest_Fragment();
             }
             return null;
         }

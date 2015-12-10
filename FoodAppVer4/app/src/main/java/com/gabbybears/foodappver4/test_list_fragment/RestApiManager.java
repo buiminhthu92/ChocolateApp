@@ -10,21 +10,22 @@ import retrofit.converter.GsonConverter;
  */
 public class RestApiManager {
 
-    private RestApi mFlowerApi;
+    private FlowerApi mFlowerApi;
 
-    public RestApi getFlowerApi() {
+    public FlowerApi getFlowerApi() {
 
         if(mFlowerApi == null) {
             GsonBuilder gson = new GsonBuilder();
             gson.registerTypeAdapter(String.class, new StringDesirializer());
 
-            mFlowerApi = (RestApi) new RestAdapter.Builder()
+            mFlowerApi = new RestAdapter.Builder()
                     .setEndpoint(Constants.BASE_URL)
                     .setConverter(new GsonConverter(gson.create()))
                     .build()
-                    .create(Rest_Item_Test.class);
+                    .create(FlowerApi.class);
         }
         return mFlowerApi;
     }
 
 }
+

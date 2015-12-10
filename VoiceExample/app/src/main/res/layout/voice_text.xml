@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="11dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/inputSay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input text you want say"/>
+
+    <Button
+        android:id="@+id/btnSay"
+        android:layout_marginTop="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CLICK TO BEGIN SPEAK"/>
+
+</LinearLayout>

@@ -1,6 +1,7 @@
 package com.gabbybears.foodappver4.start_screen;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -22,6 +23,7 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.gabbybears.foodappver4.R;
+import com.gabbybears.foodappver4.home_screen.HomeActivity;
 import com.squareup.picasso.Picasso;
 
 
@@ -34,6 +36,9 @@ public class MainFragment extends Fragment {
 
     private AccessTokenTracker mTokenTracker;
     private ProfileTracker mProfileTracker;
+
+    public static Uri uriImgUser;
+    public static String nameUser;
 
     private FacebookCallback<LoginResult> mCallback = new FacebookCallback<LoginResult>() {
         @Override
@@ -70,6 +75,9 @@ public class MainFragment extends Fragment {
             protected void onCurrentAccessTokenChanged(AccessToken oldToken, AccessToken newToken) {
                 if (newToken != null) {
                     Toast.makeText(getActivity(), "You Login", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(getActivity(), HomeActivity.class);
+                    startActivity(intent);
                 }
                 else {
                     Toast.makeText(getActivity(), "You Logout", Toast.LENGTH_SHORT).show();
@@ -108,7 +116,8 @@ public class MainFragment extends Fragment {
 
     public void displayWellcomeMessage(Profile profile) {
         if (profile != null) {
-
+            uriImgUser = profile.getProfilePictureUri(90, 90);
+            nameUser = profile.getFirstName() + " " + profile.getLastName();
         }
     }
 

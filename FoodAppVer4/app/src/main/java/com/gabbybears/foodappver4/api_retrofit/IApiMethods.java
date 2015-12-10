@@ -1,5 +1,7 @@
 package com.gabbybears.foodappver4.api_retrofit;
 
+import com.gabbybears.foodappver4.restaurant_screen.ImageRestObj;
+
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Query;
@@ -44,5 +46,10 @@ public interface IApiMethods {
     @GET("/get_rest_by_tag.php?tagId=7")
     void getCurators7(
             @Query("api_key") String key, Callback<Curator> cb
+    );
+
+    @GET("/get_list_fake2.php")
+    void getImageRest(
+            @Query("api_key") String key, Callback<ImageRestObj> cb
     );
 }

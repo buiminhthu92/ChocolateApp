@@ -36,7 +36,7 @@
                 <item
                     android:id="@+id/drawerViewItem5"
                     android:icon="@drawable/nav_friends_icon"
-                    android:title="Friens" />
+                    android:title="Friends" />
             </menu>
         </item>
 
